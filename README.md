@@ -42,3 +42,8 @@ Para ejecutar este juego necesitas:
    git clone https://github.com/RousseauP00/Juego-python
    cd juego-python
 
+2. **Ejecuta el script principal**
+    ```bash
+    python3 game.py
+
+3. **Disfruta del juego**
