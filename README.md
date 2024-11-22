@@ -39,6 +39,6 @@ Para ejecutar este juego necesitas:
 
 1. **Clona este repositorio**  
    ```bash
-   git clone https://github.com/tuusuario/juego-nave.git
-   cd juego-nave
+   git clone https://github.com/RousseauP00/Juego-python
+   cd juego-python
 
