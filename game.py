@@ -6,6 +6,11 @@ pygame.init()
 # Definicion del tamaño de la ventana
 ANCHO = 800
 ALTO = 600
+BLANCO = (255, 255, 255) # Color blanco
+AZUL = (0, 0, 255) # Color azul
+ROJO = (255, 0, 0) # Color rojo
+NEGRO = (0, 0, 0) # Color negro
+
 
 # Creacion de la ventana
 pantalla = pygame.display.set_mode((ANCHO,ALTO))
@@ -15,7 +20,7 @@ pygame.display.set_caption("Juego de Nave") #Titulo de la ventana
 nave = pygame.Rect(ANCHO // 2 -25, ALTO - 50, 30, 30) # Objeto rectangular en la posicion (ANCHO // - 25, ALTO - 50)(x,y) de tamaño 50x30
 
 # Color de la nave
-color_nave = (255, 255, 255) # Blanco
+color_nave = BLANCO
 
 # Velocidad de la nave
 velocidad_nave = 8
@@ -28,17 +33,18 @@ tiempo_entre_disparos = 200
 ultimo_disparo = 0 # Almacena el tiempo del ultimo disparo
 
 # Definimos las propiedades de los proyectiles
-color_proyectil = (255, 0 ,0) # Rojo
+color_proyectil = ROJO
 velocidad_proyectil = 7
 
 # Definimos los objetos enemigos
 enemigos = []
 
 # Definimos las propiedades de los enemigos
-color_enemigos = (0, 0, 255) # Azul
+color_enemigos = AZUL
 velocidad_enemigos = 3
 
 # Contador de puntos
+fuente = pygame.font.Font(None, 36)
 puntos = 0
 
 # Bucle principal
@@ -84,7 +90,7 @@ while ejecutando:
             enemigos.remove(enemigo)
     
     # Fondo de la pantalla en negro
-    pantalla.fill((0, 0, 0))
+    pantalla.fill(NEGRO)
     
     # Pintamos la nave en la pantalla
     pygame.draw.rect(pantalla, color_nave, nave)
@@ -96,6 +102,10 @@ while ejecutando:
     # Pintamos los enemigos en la pantalla
     for enemigo in enemigos:
         pygame.draw.rect(pantalla, color_enemigos, enemigo["rect"])
+        
+    # Pintamos la puntuación en la pantalla
+    texto_puntuacion = fuente.render(f"Puntos: {puntos}", True, BLANCO)
+    pantalla.blit(texto_puntuacion, (10, 10))
         
     # Comprobamos si los proyectiles "Matan" a los enemigos
     for proyectil in proyectiles[:]:
@@ -111,11 +121,11 @@ while ejecutando:
     # Verificamos colisiones entre proyectiles y enemigos
     for enemigo in enemigos[:]:
         if nave.colliderect(enemigo["rect"]):
-            print("¡Colisión! Fin del juego")
+            print(f"¡Colisión! Fin del juego. Has obtenido {puntos} puntos")
             ejecutando = False
             break
-        if  enemigo["rect"].y == ALTO - 40:
-            print("¡Te alcanzaron! Fin del juego")
+        if  enemigo["rect"].top >= ALTO - 20:
+            print(f"¡Te alcanzaron! Fin del juego. Has obtenido {puntos} puntos")
             ejecutando = False
             break
             
