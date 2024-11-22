@@ -48,23 +48,26 @@ Para ejecutar este juego necesitas:
 
 3. **Disfruta del juego**
 
-🛠️ Personalización
+## 🛠️ Personalización
+
 Este proyecto es completamente personalizable. Puedes modificar:
 
-Velocidad: Cambia la velocidad de la nave, los proyectiles o los enemigos.
-Diseño: Rediseña la nave, los proyectiles y los enemigos con tus propios gráficos.
-Reglas: Añade nuevas mecánicas o desafíos para hacer el juego más interesante.
-Explora el código y experimenta para adaptarlo a tus ideas.
+- Velocidad: Cambia la velocidad de la nave, los proyectiles o los enemigos.
+- Diseño: Rediseña la nave, los proyectiles y los enemigos con tus propios gráficos.
+- Reglas: Añade nuevas mecánicas o desafíos para hacer el juego más interesante.
+- Explora el código y experimenta para adaptarlo a tus ideas.
 
-💡 Aprendizajes y motivación
-Este juego fue creado como un proyecto para aprender Python y Pygame de manera práctica. A través del desarrollo:
+## 💡 Aprendizajes y motivación
 
-Aprendí los conceptos básicos de Pygame, como renderizar gráficos, gestionar eventos del teclado y detectar colisiones.
+Este juego fue creado como un proyecto para aprender Python y **Pygame** de manera práctica. A través del desarrollo:
+
+Aprendí los conceptos básicos de **Pygame**, como renderizar gráficos, gestionar eventos del teclado y detectar colisiones.
 Practiqué la organización de código para proyectos más grandes.
 Comprendí cómo estructurar un juego con lógica básica.
 Si estás aprendiendo a programar y quieres entender cómo se diseñan videojuegos básicos, este código es un excelente punto de partida.
 
-🤝 Contribuciones
+## 🤝 Contribuciones
+
 ¡Todas las contribuciones son bienvenidas! Si tienes ideas para mejorar el juego o encuentras algún problema, no dudes en abrir un issue o enviar un pull request.
 
 
